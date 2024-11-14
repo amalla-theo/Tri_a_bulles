@@ -61,12 +61,21 @@ public class Main {
 
         for (int j = 0; j < tab2.length; j++) {
 
-            for (int k = 0; k < tab2.length - 1; k++) {
-                if (k > tab2.length - j +1) {
+            for (int k = 0; k < j; k++) {
+
+               if (tab2[k] > tab2[k + 1]) {
+                   System.out.print("\u001B[32m" + tab2[k] + "; " + tab2[k+1] + "; ");
+               }
+                System.out.print("\u001B[0m" + tab2[k] + "; ");
+
+
+               /* if (k > tab2.length - j ) {
                     System.out.print("\u001B[32m" + tab2[k] + "; ");
                 }else{
                     System.out.print("\u001B[0m" + tab2[k] + "; ");
                 }
+
+                */
             }
 
             for (int i = 0; i < tab2.length - 1; i++) {
