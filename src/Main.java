@@ -59,26 +59,23 @@ public class Main {
 
         System.out.println("\n\nClassement direct");
 
-        buffer = 0;
-
         for (int j = 0; j < tab2.length; j++) {
+
+            for (int k = 0; k < tab2.length - 1; k++) {
+                if (k > tab2.length - j +1) {
+                    System.out.print("\u001B[32m" + tab2[k] + "; ");
+                }else{
+                    System.out.print("\u001B[0m" + tab2[k] + "; ");
+                }
+            }
+
             for (int i = 0; i < tab2.length - 1; i++) {
                 if (tab2[i] > tab2[i + 1]) {
                     buffer = tab2[i];
                     tab2[i] = tab2[i + 1];
                     tab2[i + 1] = buffer;
-
-
-                    for (int k = 0; k < i; k++) {
-                        System.out.print(tab2[i] + "; ");
-                    }
                 }
             }
         }
-        for (int i = 0; i < tab2.length; i++) {
-           // System.out.print(tab2[i] + "; ");
-        }
-
     }
 }
-
